@@ -71,5 +71,5 @@ newdata <- rbind(new_test, new_train)
 finaldataset <- aggregate(newdata[,c(-1,-2)], list(newdata$volunteer_ID, newdata$Activity), mean)<br />
 names(finaldataset)[1] <- "volunteer_ID"<br />
 names(finaldataset)[2] <- "Activity"<br />
-write.csv(finaldataset, file = "finaldataset.csv")<br />
+write.table(finaldataset, file = "finaldataset.txt",sep = " ", row.name=FALSE)<br />
  
