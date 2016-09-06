@@ -25,6 +25,7 @@ y_test <- read.delim("y_test.txt", sep = "", header = F)
 subject_test <- read.delim("subject_test.txt", sep = "", header = F)
 
 
+
 ## Extracting columns.
 
 ### only the measurements on the mean and standard deviation for each measurement were extreacted. (Note: "meanFreq()" was not included because it's not the parameter required here.)
