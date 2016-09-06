@@ -1,5 +1,3 @@
-explains how all of the scripts work and how they are connected.
-
 ## Introduction.
 
 ###  The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. The R script run_analysis.R here does the following:
@@ -70,4 +68,7 @@ newdata <- rbind(new_test, new_train)
 ### the average of each variable for each activity and each subject
 
 finaldataset <- aggregate(newdata[,c(-1,-2)], list(newdata$volunteer_ID, newdata$Activity), mean)
+names(finaldataset)[1] <- "volunteer_ID"
+names(finaldataset)[2] <- "Activity"
+write.csv(finaldataset, file = "finaldataset.csv")
  
